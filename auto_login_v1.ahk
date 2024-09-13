@@ -10,21 +10,13 @@ LunchApp()
     WinActivate
 }
 
-SetEnglishInput()
-{
-    ; 切换到英文输入法 (美式键盘布局)
-    DllCall("LoadKeyboardLayout", "Str", "00000409", "Int", 1)  ; 00000409 是美式英文输入法的代码
-}
-
 Login()
 {
     ; clean account field
-    ; Loop, 15
-    ; {
-    ;     Send, {Del}
-    ; }
-
-    SetEnglishInput()
+    Loop, 15
+    {
+        Send, {Del}
+    }
 
     ; enter account number
     Send,
